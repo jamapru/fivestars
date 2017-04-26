@@ -1,1 +1,5 @@
 ##Placeholder for helpfulness aggregation
+helpfulness.agg <- function(x)
+{
+patio[, "aggregation"] <- patio[, "helpful 1"] / patio[, "helpful 2"]
+}
