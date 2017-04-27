@@ -1,0 +1,15 @@
+#Emotion graphs the number of responses for each of Bayes' emotional categories in the reviews
+
+ggplot(combined_df, aes(x=emotion)) +
++     geom_bar(aes(y=..count.., fill=emotion)) +
++     scale_fill_brewer(palette="Dark2") +
++     labs(x="Emotions", y="Count")
+
+#Polarity graphs positive, negative, and neutral responses in reviews
+
+ggplot(combined_df, aes(x=polarity)) +
++     geom_bar(aes(y=..count.., fill=polarity)) +
++     scale_fill_brewer(palette="Dark2") +
++     labs(x="Polarities", y="Count")
+
+#' @source: Galili, Tal and Christopher Johnson. Intro to Text Analysis with R. R-Bloggers (2016). https://www.r-bloggers.com/intro-to-text-analysis-with-r/
