@@ -1,0 +1,24 @@
+#FULL.REACTION FUNCTION
+
+#gives output rating on each scale of emotions using the Bayesian sentiment analysis scale
+reaction <- classify_emotion(New_Patio_Reviews, algorithm="bases", prior=1.0)
+
+#classifies each of the Bayesian emotions: anger, disgust, fear, joy, sadness, surprise, and the 7th category of 'best fit' determination
+emotion = reaction()[,7]
+
+#If the overall reaction is indeterminate, return 'unknown'
+emotion[is.na(emotion)] = "unknown"
+
+#Classifies emotional polarity
+pol = classify_polarity(New_Patio_Reviews, algorithm="bayes")
+polarity = pol[,4]
+
+#Full function as 'full.reaction'
+reaction <- function(r)
+{
+  reaction <- classify_emotion(New_Patio_Reviews, algorithm="bases", prior=1.0)
+  emotion = reaction()[,7]
+  emotion[is.na(emotion)] = "unknown"
+  pol = classify_polarity(New_Patio_Reviews, algorithm="bayes")
+  polarity = pol[,4]
+}
