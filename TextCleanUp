@@ -1,0 +1,20 @@
+# Code to remove unwanted characters from text, including punctuation, digits, and author names
+
+patio = gsub("[[:punct:]]", "", patio)
+patio = gsub("[[:digit:]]", "", patio)
+patio = gsub("[ \t]{2,}", "", patio)
+patio = gsub("^\\s+|\\s+$", "", patio)
+
+# Function to test case match across all words
+
+try.error = function(t)
+{
+  y = NA
+  try_error = tryCatch(tolower(t), error=function(e) e)
+  if (!inherits(try_error, "error"))
+    y = tolower(t)
+  return(y)
+}
+patio = sapply(patio, try.error)
+patio = patio[!is.na(patio)]
+names(patio) = NULL
