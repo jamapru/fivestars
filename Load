@@ -3,3 +3,11 @@
 reviews <- readCSV("New_Patio_Reviews.csv") #data via http://jmcauley.ucsd.edu/data/amazon/
 patio <- data.frame(New_Patio_Reviews)
 patio <- df[df$New_Patio_Reviews, ]
+
+#Must load graphics and text analysis packages
+
+install.packages("plyr")
+install.packages("ggplot2")
+install.packages("RColorBrewer")
+install.packages("tm")
+install.packages("SnowballC")
