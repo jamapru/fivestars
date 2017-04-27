@@ -18,3 +18,5 @@ try.error = function(t)
 patio = sapply(patio, try.error)
 patio = patio[!is.na(patio)]
 names(patio) = NULL
+
+#' @source: Sanchez, Gaston. “Sentiment Analysis with “sentiment”.” 2012. Mining twitter with R. 09 November 2015. 
