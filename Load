@@ -1,0 +1,3 @@
+# Must load review data
+
+reviews <- readCSV("New_Patio_Reviews.csv") #data via http://jmcauley.ucsd.edu/data/amazon/
