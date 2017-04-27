@@ -1,1 +1,2 @@
-Paired Helpful and Overall reviews placeholder
+#A simple graph of helpfulness ratios by star rating
+plot(New_Patio_Reviews$rating, New_Patio_Reviews$review, xlab = "Star Rating", ylab = "Helpfulness Aggregation", main = "Helpfulness by Star Rating", cex = 0.5, pch = 20, col = 174)
