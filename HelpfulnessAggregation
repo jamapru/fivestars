@@ -1,5 +1,20 @@
-##Placeholder for helpfulness aggregation
-helpfulness.agg <- function(x)
-{
-patio[, "aggregation"] <- patio[, "helpful 1"] / patio[, "helpful 2"]
-}
+ #' @title Helpfulness Aggregation
+ #' 
+ #' @description 
+ #' \code{helpfulness.agg} returns the result of helpful 1 divided by helpful 2
+ #'  to give a ratio of overall rating 'helpfulness'
+ #'
+ #' @param x the final ratio
+ #' @return a decimal result between 0 and 1, inclusive
+ #'
+ #'
+ #' @examples 
+ #' #Ratio returned by 80 helpful ratings out of 81 raters
+ #' helpfulness.agg <- function(a,b)
+ #' helpfulness.agg
+ #' 0.9876543
+ #'
+ helpfulness.agg <- function(x)
+  {
+      New_Patio_Reviews[, 3] <- New_Patio_Reviews[, 1] / New_Patio_Reviews[, 2]
+  }
