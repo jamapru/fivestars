@@ -16,5 +16,5 @@
  #'
  helpfulness.agg <- function(x)
   {
-      New_Patio_Reviews[, 3] <- New_Patio_Reviews[, 1] / New_Patio_Reviews[, 2]
+      New_Patio_Reviews[, 6] <- New_Patio_Reviews[, 1] / New_Patio_Reviews[, 2]
   }
