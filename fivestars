@@ -1,0 +1,41 @@
+\name{fivestars}
+\docType{package}
+\title{
+\packageTitle{fivestars}
+}
+\description{
+\packageDescription{fivestars}
+}
+\details{
+
+The DESCRIPTION file:
+\packageDESCRIPTION{fivestars}
+\packageIndices{fivestars}
+A package for parsing and analyzing short text, inspired by Amazon.com product reviews. Uses packages 'plyr', 'ggplot2', 'tm', 'RColorBrewer', 'plyr', and 'sentiment' to perform text analysis and graphical output.
+}
+\author{
+\JaylynPruitt{fivestars}
+
+Maintainer: \jaylynpruitt{fivestars}
+}
+\references{
+The Art of R programming: a tour of statistical software design by Norman Matloff, Published by No Starch   Press San Francisco
+Statistics for Library and Information Services. A Primer for Using Open Source R Software for Accessibiliy and Visualization by Alon Friedman Published by Rowman & Littlefield
+Galili, Tal and Christopher Johnson. Intro to Text Analysis with R. R-Bloggers (2016). https://www.r-bloggers.com/intro-to-text-analysis-with-r/
+}
+\examples{
+# Full.Reaction Function
+reaction <- function(r)
+{
+  reaction <- classify_emotion(New_Patio_Reviews, algorithm="bases", prior=1.0)
+  emotion = reaction()[,7]
+  emotion[is.na(emotion)] = "unknown"
+  pol = classify_polarity(New_Patio_Reviews, algorithm="bayes")
+  polarity = pol[,4]
+}
+# Helpfulness Aggregation
+helpfulness.agg <- function(x)
+  {
+      New_Patio_Reviews[, 6] <- New_Patio_Reviews[, 1] / New_Patio_Reviews[, 2]
+  }
+}
