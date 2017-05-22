@@ -1,3 +1,5 @@
+install.packages("wordcloud")
+
 emos = levels(factor(sent_df$emotion))
 nemo = length(emos)
 emo.docs = rep("", nemo)
